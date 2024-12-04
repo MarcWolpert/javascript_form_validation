@@ -69,5 +69,41 @@ email2.addEventListener('input', (e) => {
 	}
 });
 
+const form3 = document.getElementById('form3');
 const email3 = document.getElementById('mail3');
+const emailError = document.querySelector('#mail3 + span.error');
 
+email3.addEventListener('input', (event) => {
+	if (email3.validity.valid) {
+		emailError.textContent = ''; // Remove the message content
+		emailError.className = 'error'; // Removes the `active` class
+	} else {
+		// If there is still an error, show the correct error
+		showError();
+	}
+});
+
+form3.addEventListener('submit', (event) => {
+	// if the email field is invalid
+	if (!email3.validity.valid) {
+		// display an appropriate error message
+		showError();
+		// prevent form submission
+		event.preventDefault();
+	}
+});
+
+function showError() {
+	if (email3.validity.valueMissing) {
+		// If empty
+		emailError.textContent = 'You need to enter an email address.';
+	} else if (email3.validity.typeMismatch) {
+		// If it's not an email address,
+		emailError.textContent = 'Entered value needs to be an email address.';
+	} else if (email3.validity.tooShort) {
+		// If the value is too short,
+		emailError.textContent = `Email should be at least ${email3.minLength} characters; you entered ${email.value.length}.`;
+	}
+	// Add the `active` class
+	emailError.className = 'error active';
+}

@@ -96,7 +96,13 @@
 					</form>
 				</div>
 				<div class="formPractice card">
-					<form novalidate>
+					<!-- novalidate removes the browser's validation
+					 thereby allowing us to instead display custom
+					 error messages of our choosing -->
+					<form
+						id="form3"
+						novalidate
+					>
 						<p>
 							<label for="mail">
 								<span>Please enter an email address:</span>
