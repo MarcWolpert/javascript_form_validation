@@ -1,0 +1,10 @@
+
+/Users/marcwolpert/Desktop/OdinProject/todo_list/todo_list/todo_list/eslint.config.mjs
+  7:34  error  Parsing error: Unexpected token import
+
+/Users/marcwolpert/Desktop/OdinProject/todo_list/todo_list/todo_list/src/lib/menuTab.js
+  3:10  error  drinkImageNameDescription not found in './drinks.js'     import/named
+  3:53  error  Unexpected use of file extension "js" for "./drinks.js"  import/extensions
+
+✖ 3 problems (3 errors, 0 warnings)
+
