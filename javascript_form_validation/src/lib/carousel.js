@@ -42,7 +42,6 @@ export default class Carousel {
 			// add class to circle
 			circle.classList.add('circle');
 			circle.id = `${image}`;
-			console.log(circle);
 			circlesDiv.appendChild(circle);
 			circlesDivWidth += 1 + 0.25 * 2;
 			ul.appendChild(li);
@@ -60,7 +59,6 @@ export default class Carousel {
 
 		circlesDiv.style.left = `${this.width / 2 - circlesDivWidth}px`;
 		circlesDiv.style.transform = `translateX(${-circlesDivWidth / 2}rem)`;
-		console.log(circlesDiv);
 		carousel.appendChild(circlesDiv);
 		carousel.appendChild(ul);
 		carousel.appendChild(this.backButton);
@@ -87,10 +85,8 @@ export default class Carousel {
 
 	circleClick() {
 		const circles = document.getElementsByClassName('circle');
-		console.log(circles, `${circles.length}`);
 		Array.from(circles).forEach((circle) => {
 			circle.addEventListener('click', () => {
-				console.log(circle.id);
 				this.slides[this.activeSlideIndex].removeAttribute(
 					'data-active',
 				);

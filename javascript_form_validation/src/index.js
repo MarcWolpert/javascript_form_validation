@@ -37,9 +37,9 @@ const carouselKV = {
 		'Autumn leaves in focus',
 };
 
-const carousel1 = new Carousel(400, 600, carouselKV);
-headlineContent.appendChild(carousel1.carouselElement);
-carousel1.circleClick();
+// const carousel1 = new Carousel(400, 600, carouselKV);
+// headlineContent.appendChild(carousel1.carouselElement);
+// carousel1.circleClick();
 
 //form validation
 const email = document.getElementById('mail');
@@ -52,3 +52,22 @@ email.addEventListener('input', (e) => {
 		email.setCustomValidity('');
 	}
 });
+
+//form validation of a specific email domain
+const email2 = document.getElementById('mail2');
+email2.addEventListener('input', (e) => {
+	//validate with built-in restraints
+	email2.setCustomValidity('');
+	if (!email2.validity.valid) {
+		return;
+	}
+	//extend with custom constraints
+	if (!email2.value.endsWith('@example.com')) {
+		email2.setCustomValidity(
+			'Please enter an email address of @example.com',
+		);
+	}
+});
+
+const email3 = document.getElementById('mail3');
+

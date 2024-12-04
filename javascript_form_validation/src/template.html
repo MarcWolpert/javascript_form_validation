@@ -82,6 +82,40 @@
 						<button>Submit</button>
 					</form>
 				</div>
+				<div class="formPractice card">
+					<form method="dialog">
+						<label for="mail">
+							Email address (a@example.com only):
+						</label>
+						<input
+							type="email"
+							name="mail"
+							id="mail2"
+						/>
+						<button>Submit</button>
+					</form>
+				</div>
+				<div class="formPractice card">
+					<form novalidate>
+						<p>
+							<label for="mail">
+								<span>Please enter an email address:</span>
+								<input
+									type="email"
+									id="mail3"
+									name="mail"
+									required
+									minlength="8"
+								/>
+								<span
+									class="error"
+									aria-live="polite"
+								></span>
+							</label>
+						</p>
+						<button>Submit</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</body>
