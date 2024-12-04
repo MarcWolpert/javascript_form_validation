@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Dynamic UI</title>
+	</head>
+	<body>
+		<aside id="aside">
+			<nav>
+				<div class="addTask">
+					<img
+						src="icons/plus-circle.svg"
+						alt="Add tasks button"
+					/>
+					<button id="asideButton">Add Project</button>
+				</div>
+
+				<div class="inboxContainer">
+					<img
+						src="icons/inbox.svg"
+						alt="inbox"
+					/>
+					<button
+						class="navButtons"
+						id="currentTasks"
+					>
+						Inbox
+					</button>
+				</div>
+			</nav>
+		</aside>
+		<div id="content">
+			<div id="header">
+				<div id="headline">
+					<h1 id="topic">Inbox</h1>
+				</div>
+				<div id="options">
+					<img
+						src="icons/dots-horizontal (1).svg"
+						alt="More Options"
+						id="ellipsis"
+					/>
+				</div>
+			</div>
+			<div class="headlineContent">
+				<div
+					class="card"
+					id="card01"
+				>
+					<div class="cardHeader">
+						<p class="textTitle">Make Burgers at the Alleyway</p>
+						<p class="textDue">Due: 11/29/25 9:30pm</p>
+					</div>
+					<p class="textDesc">
+						The element is positioned according to the normal flow
+						of the document, and then offset relative to its nearest
+						scrolling ancestor and containing block (nearest
+						block-level ancestor), including table-related elements,
+						based on the values of top, right, bottom, and left. The
+						offset does not affect the position of any other
+						elements.
+					</p>
+					<div class="cardFooter">
+						<p class="textPriority">Priority: High</p>
+						<button class="deleteButton options">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
